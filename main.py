@@ -153,7 +153,7 @@ elif page == "비문학 문제 생성":
                 provider=provider
             )
             # Step 1: 지문 분석
-            analysis = generator.analyze_text(passage)
+            analysis = generator.analyze_passage(passage)
             st.subheader("중간 단계 1: 지문 분석 결과")
             st.json(analysis)
             analysis_file = os.path.join("output", "nonlit_analysis.json")
