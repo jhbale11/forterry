@@ -417,7 +417,7 @@ def correct_text_with_llm(text_chunk, chat_model):
 {text_chunk}
 """
     message = HumanMessage(content=prompt)
-    response = chat_model.invoke([message])  # 변경: invoke 메서드 사용
+    response = chat_model([message])
     return response.content.strip()
 
 def chunk_text(text, chunk_size=2000, overlap=200):
